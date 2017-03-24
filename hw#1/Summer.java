@@ -11,30 +11,22 @@ public class Summer
 	//don't need constructor; automatically defined
 	//no parameters need to be used in constructor
 
-	public void sum1to100()
+	public void sum(int l, int h)
 	{
+		int low = l;
+		int high = h;
 		int sum = 0;
-		for (int i = 1; i < 101; i++)
+		for (int i = l; i < h+1; i++)
 		{
 			sum +=i;
 		}
 		System.out.println("The sum from 1 to 10 is: " + sum);
 	}
-	public void sum100to1000()
-	{
-		int sum = 0;
-		for (int i = 100; i < 1001; i++)
-		{
-			sum +=i;
-		}
-		System.out.println("The sum from 100 to 1000 is: " + sum);
-	}
 
 	public static void main(String args[]){
 		Summer s = new Summer();
-		Summer s2 = new Summer();
-
-		s.sum1to100();
-		s.sum100to1000();
+		
+		s.sum(1,100);
+		s.sum(100,1000);
 	}
 }
